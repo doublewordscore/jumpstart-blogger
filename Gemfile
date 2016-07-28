@@ -32,6 +32,11 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'paperclip'
 # gem added from Jumpstart Blog tutorial
+# adds capability to attach images to blog posts
+
+gem 'sorcery'
+# gem added from Jumpsstart Blog tutorial
+# adds authentication 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

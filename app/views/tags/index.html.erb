@@ -4,9 +4,13 @@
   <% @tags.each do |tag| %>
     <li>
       <%= link_to tag.name, tag_path(tag), class: 'tag' %>
-      <%= link_to "delete", tag_path(tag), method: :delete, data: {confirm:"Really delete the tags?"} %>
+      <% if logged_in? %>
+        <%= link_to "delete", tag_path(tag), method: :delete, data: {confirm:"Really delete the tags?"} %>
+      <% end %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Create New Article", new_article_path, class: "new_article" %>
+<% if logged_in? %>
+  <%= link_to "Create New Article", new_article_path, class: "new_article" %>
+<% end %>
